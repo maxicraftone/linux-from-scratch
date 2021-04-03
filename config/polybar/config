@@ -1,0 +1,65 @@
+include-file = $HOME/.config/polybar/modules/wired.ini
+include-file = $HOME/.config/polybar/modules/bspwm.ini
+include-file = $HOME/.config/polybar/modules/date.ini
+include-file = $HOME/.config/polybar/modules/alsa.ini
+include-file = $HOME/.config/polybar/modules/cpu.ini
+include-file = $HOME/.config/polybar/modules/spotify.ini
+include-file = $HOME/.config/polybar/modules/weather.ini
+
+
+[colors]
+background = ${xrdb:background}
+background-transparent = #000000aa
+background-alt = #2D323D
+foreground = ${xrdb:foreground}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+color6 = ${xrdb:color6}
+color8 = ${xrdb:color8}
+
+[bar/mybar]
+wm-restack = bspwm
+override-redirect = false
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+fixed-center = true
+width = 1850
+height = 30
+radius = 0.0
+line-size = 0
+line-color = #f00
+offset-y = 35
+offset-x = 35
+padding-left = 2.0
+padding-right = 2.0
+
+monitor = ${env:MONITOR:}
+
+font-2 = Arimo\ Nerd\ Font:style=Regular:pixelsize=10;3
+
+font-0 = Font\ Awesome\ 5\ Free\ Regular:style=Regular:pixelsize=10;3
+font-1 = Font\ Awesome\ 5\ Free\ Solid:style=Solid:pixelsize=10;3
+
+modules-right = alsa cpu wired date weather
+modules-center = spotify
+modules-left =  bspwm
+; Position of the system tray window
+tray-position = right
+tray-maxsize = 15
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+; Pad the sides of each tray icon
+tray-padding = 1
+
+[settings]
+label-focused-underline= ${colors.background}
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+pseudo-transparency = true

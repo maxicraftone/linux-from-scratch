@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Autostart
+VBoxClient --vmsvga
+killall sxhkd
+sxhkd &
+$HOME/.config/polybar/launch.sh &
+killall picom
+picom &
+~/utils/wal_reload.py
+
+# Monitor config
+bspc monitor "Virtual1" -d I II III IV V VI VII
+
+# Bspwm config
+bspc config border_width		0
+bspc config window_gap	       		35
+bspc config focus_follows_pointer	true
+bspc config split_ratio			0.6
+bspc config borderless_monocle		true
+bspc config gapless_monocle		false
+bspc config single_monocle		true
+
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
+bspc rule -a 'Atom' desktop='^4'
