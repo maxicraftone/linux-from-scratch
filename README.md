@@ -150,7 +150,7 @@ Im folgenden noch einmal die Dokumentation meines Arbeitsprozesses, die ich para
 >    - Erstellung von Beispiel Screenshots des fertigen Systems
 
 # Screenshots
-Hier nochmal einige Screenshots des fertigen Systems
+Hier nochmal einige Screenshots des fertigen Systems (mehr [hier](https://github.com/maxicraftone/linux-from-scratch/tree/main/Screenshots))
 
 Fertiger Desktop
 ![desktop](https://raw.githubusercontent.com/maxicraftone/linux-from-scratch/main/Screenshots/desktop.png)
